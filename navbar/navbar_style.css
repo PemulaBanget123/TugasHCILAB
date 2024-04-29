@@ -1,10 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
-@import url(https://db.onlinewebfonts.com/c/4c19fc875e7ba1e6831129de3ab5ac0b?family=Retro+Gaming);
-@font-face {
-    font-family: 'Depixel';
-    src: url('./Font/depixel/depixelbreit.woff') format("woff");
-    src: url('./Font/depixel/DePixelBreit.otf') format("opentype"), url('./Font/depixel/depixelbreit.woff2') format("woff"), url('./Font/depixel/DePixelBreit.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 body{
     background: blue;
 }
@@ -18,11 +12,10 @@ body{
     box-sizing: border-box;
 }
 nav ul li{
-    /* font-family: 'Averia Serif Libre'; */
-    font-family: 'Retro Gaming';
+    font-family: 'Averia Serif Libre';
     display: inline-block;
     line-height: 80px;
-    /* margin: 0 2px; */
+    margin: 0 5px;
 }
 nav{
     background: black;
@@ -33,28 +26,21 @@ label.logo{
     color: white;
     font-size: 30px;
     line-height: 80px;
-    padding: 0 20px;
+    padding: 0 30px;
     font-weight: bold;  
 }
 nav ul{
     float: right;
     margin-right: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 20px;
 }
 nav ul li a{
     color: white;
-    font-size: 15px;
+    font-size: 17px;
     text-transform: uppercase;
     border-radius: 3px;
     /* padding-left: 15px; */
-    /* margin-left: 10px; */
+    margin-left: 15px;
     /* width: 90px; */
-    /* gap: 9px; */
-    padding: 5px;
 }
 a.active,a:hover{
     background-color: purple;
@@ -71,10 +57,6 @@ a.active,a:hover{
 }
 #check{
     display: none;
-}
-.ayam{
-    font-family: 'Depixel';
-    font-weight: bolder;
 }
 @media (max-width: 420px) {
     label.logo{
@@ -102,11 +84,8 @@ a.active,a:hover{
     }
     nav ul li{
         display: block;
-        margin: 20px 0;
+        margin: 50px 0;
         line-height: 30px;
-    }
-    nav ul{
-        flex-direction: column;
     }
     nav ul li a{
         font-size: 20px;
