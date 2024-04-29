@@ -6,7 +6,7 @@
     src: url('./Font/depixel/DePixelBreit.otf') format("opentype"), url('./Font/depixel/depixelbreit.woff2') format("woff"), url('./Font/depixel/DePixelBreit.ttf');
 }
 body{
-    background: white;
+    /* background: blue; */
 }
 
 /* NAVBAR */
@@ -37,6 +37,9 @@ label.logo{
     line-height: 80px;
     padding: 0 20px;
     font-weight: bold;  
+}
+label.logo img{
+    width: 80px;
 }
 nav ul{
     float: right;
@@ -75,9 +78,39 @@ a.active,a:hover{
 #check{
     display: none;
 }
-.ayam{
+
+
+/* ISI */
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid;
+    /* background: rebeccapurple; */
+    /* background-image: url('./Asset/BackChar.png'); */
+    background-position: center;
+    /* background-size:100%; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.char1desc{
+    width: 50%;
+}
+.char1name{
     font-family: 'Depixel';
-    font-weight: bolder;
+    margin-bottom: 3%;
+}
+.char1info{
+    display: block;
+    font-family: 'Depixel';
+    /* width: 90%; */
+    text-align: justify;
+    /* text-align: center; */
+}
+.char1 img{
+    width: 190px;
 }
 @media (max-width: 420px) {
     label.logo{
@@ -86,6 +119,15 @@ a.active,a:hover{
     }
     nav ul li a{
         font-size: 16px;
+    }
+    .char1 img{
+        width: 100px;
+    }
+    .char1info{
+        font-size: 10px;
+    }
+    .char1name{
+        font-size: 12px;
     }
 }
 
@@ -122,10 +164,4 @@ a.active,a:hover{
     #check:checked ~ ul{
         left: 0;
     }
-}
-
-#label-logo{
-    width: 80px;
-    height: 80px;
-    margin-left: 20px;
 }
