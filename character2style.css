@@ -23,6 +23,10 @@
     list-style: none;
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+    height: 100%;   
+}
 nav ul li{
     /* font-family: 'Averia Serif Libre'; */
     font-family: 'Retro Gaming';
@@ -85,13 +89,21 @@ a.active,a:hover{
     display: none;
 }
 
+.list{
+    width: 100%;
+    /* height:800px; */
+}
+
 
 /* ISI */
 .wholebox{
     display: flex;
     flex-direction: row;
     position: relative;
+    width: 100%;
+    height: 100vh;
 }
+
 .wholebox .list .container{
     position: absolute;
     overflow: hidden;
@@ -140,6 +152,7 @@ a.active,a:hover{
     /* border: 1px solid; */
     height: 20vh;
     justify-content: center;
+    gap: 1vw;
 }
 .box{
     /* border: 1px solid; */
@@ -155,7 +168,7 @@ a.active,a:hover{
 }
 
 /* Meida Query */
-@media (max-width: 420px) {
+@media (max-width: 430px) {
     label.logo{
         font-size: 30px;
         padding-left: 50px;
@@ -172,9 +185,54 @@ a.active,a:hover{
     .char1name{
         font-size: 12px;
     }
+    .wholebox{
+        height: 100vw;
+    }
+    .list{
+        height: 100%;
+    }
+    body{
+        height:200vw;
+    }
+    .boxcontainer .box{
+        width:20vw;
+        height: 20vw;
+        /* hei */
+    }
+    .wholebox .list{
+        display: flex;
+        justify-content: center;
+    }
+    .wholebox .list .container{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        /* justify-content: center; */
+        /* align-items: center */
+    }
+    .char1name{
+        font-size:20px;
+    }
+    .char1desc{
+        text-align: center;
+        width:100%;
+    }
+    .char1info{
+        font-size:3vw;
+        width:35vh;
+    }
 }
 
 @media (max-width:860px){
+    body{
+        height: 100vw;
+    }
+    .wholebox{
+        height: 100vw;
+    }
+    .list{
+        height: 100%;
+    }
     .checkbtn{
         display: block;
     }
@@ -207,7 +265,13 @@ a.active,a:hover{
     #check:checked ~ ul{
         left: 0;
     }
-    .wholebox{
-        width:80%;
+    .boxcontainer{
+        /* margin-top: 10%; */
+        height:13vh;
+        justify-items: center;
+
+    }
+    .box{
+        width:13vh
     }
 }
