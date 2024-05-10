@@ -362,6 +362,11 @@ footer .footer2 ul li a:hover{
             /* font-size: 100px; */
             /* background-image: url(./Asset/bars-solid.svg); */
         }
+        .logo img{
+            float: left;
+            position: relative;
+            left: 2vw;
+        }
         footer{
             gap: 1vw;
         }
