@@ -131,7 +131,7 @@ nav ul li a.active,nav ul li a:hover{
     display: flex;
     flex-direction: row;
     width: 100%;
-    min-height: 100vw;
+    min-height: 40vw;
     /* min-height: f; */
     max-height: max-content;
     /* margin-top: 1%; */
@@ -147,9 +147,13 @@ nav ul li a.active,nav ul li a:hover{
 .container{
     display: flex;
     flex-direction: column;
-    /* gap: 90px; */
     justify-content: center;
     align-items: center;
+    width: 100%;
+    gap: 1vw;
+    background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.8)),url('./Asset/Backgroundpick.png');
+    background-size: cover;
+    background-position: center center;
 }
 .wholebox .list .container.active{
     opacity: 1;
@@ -161,7 +165,7 @@ nav ul li a.active,nav ul li a:hover{
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    gap: 2vw;
+    /* gap: 2vw; */
 }
 .list{
     width: max-content;
@@ -176,6 +180,7 @@ nav ul li a.active,nav ul li a:hover{
     height: 5vw;
     align-content: center;
     color: white;
+    margin-top: 2vw;
 }
 .char2name{
     /* font-size: 2.5vw; */
@@ -188,8 +193,10 @@ nav ul li a.active,nav ul li a:hover{
 .char1info{
     /* display: block; */
     font-family: 'Depixel';
-    font-size: 1.4vw;
+    font-size: 1.5vw;
     text-align: justify;
+    width:45vw;
+    
 }
 .char1 img{
     width: 30vw;
@@ -204,10 +211,11 @@ nav ul li a.active,nav ul li a:hover{
     font-family: 'Retro Gaming';
     font-size: 3vw;
 }
-.char1image{
+.forleft{
     display: flex;
-    flex-direction:row;
-    gap: 10vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 /* FOOTER */
@@ -258,9 +266,8 @@ footer .footer2 ul li a{
     background-size: 0% 2px;
 }
 footer .footer2 ul li a:hover{
-    /* text-decoration: underline; */
     background-image: linear-gradient(#000 0 0);
-    background-position: right bottom; /* OR left bottom*/
+    background-position: right bottom;
     background-size: 100% 2px;
     background-repeat: no-repeat;
     transition:background-size .5s;
@@ -273,7 +280,7 @@ footer .footer2 ul li a:hover{
         height: 10vw;
     } */
     .wholebox{
-        height: 90vw;
+        height:70vw;
     }
     .list{
         height: 100%;
@@ -326,21 +333,17 @@ footer .footer2 ul li a:hover{
         color: black;
     }
     .boxcontainer{
-        /* margin-top: 10%; */
         height:10vh;
         justify-items: center;
     }
     .box{
         width:10vh;
     }
-    .wholebox{
-        height:105vw;
-    }
     .char1 img{
-        width:30vw;
+        width:45vw;
     }
     .container{
-        /* height:100vw; */
+        height:60vw;
     }
     .char1info{
         font-size:2vw;
@@ -406,30 +409,25 @@ footer .footer2 ul li a:hover{
             /* height: 200vw; */
         }
         .list{
-            height: max-content;
-            width: max-content;
-        }
-        body{
-            height:200vw;
+            height: 140vw;
+            width: 140vw;
         }
         .wholebox{
-            /* background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.9)),url('./Asset/BackgroundHP.png'); */
+            background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.9)),url('./Asset/BackgroundHP.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            /* height: 9000px; */
             justify-content: center;
-            min-height: 200vw;
+            min-height: 70vw;
         }
         .container{
             background-image:none;
-            /* min-height: 130vw; */
+            min-height: 130vw;
             width: max-content;
         }
         .boxcontainer .box{
             width:20vw;
             height: 20vw;
-            /* margin-bottom: -10vw; */
         }
         .boxcontainer{
             height: 20vw;
@@ -452,6 +450,9 @@ footer .footer2 ul li a:hover{
         .char1info{
             width:80vw;
             font-size:3vw;
+        }
+        .forleft{
+            flex-direction: column;
         }
         .container{
             border:none;
