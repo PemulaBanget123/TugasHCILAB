@@ -1,0 +1,301 @@
+@font-face{
+    font-family: 'Retro Gaming';
+    src: url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.eot');
+    src: url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.woff')format('woff'), url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.woff2')format('woff2'), url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.ttf')format('truetype'),url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.svg')format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Depixel';
+    src: url('./Font/depixel/depixelbreit.woff') format("woff");
+    src: url('./Font/depixel/DePixelBreit.otf') format("opentype"), url('./Font/depixel/depixelbreit.woff2') format("woff"), url('./Font/depixel/DePixelBreit.ttf');
+}
+/* NAVBAR */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+nav ul li{
+    /* font-family: 'Averia Serif Libre'; */
+    font-family: 'Retro Gaming';
+    display: inline-block;
+    line-height: 80px;
+    /* margin: 0 2px; */
+}
+nav{
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    z-index: 1000;
+
+}
+label.logo{
+    color: black;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bold;  
+}
+label.logo img{
+    width: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    background: white;
+    /* z-index: 100; */
+}
+nav ul li a{
+    color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    /* padding-left: 15px; */
+    /* margin-left: 10px; */
+    /* width: 90px; */
+    /* gap: 9px; */
+    padding: 5px;
+}
+nav ul li a.active,nav ul li a:hover{
+    background-color: #b96a59;
+    color: white;
+    transition: all .5s ease-in;
+}
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+
+.list{
+    width: 100%;
+    /* height:800px; */
+}
+
+/* ISI */
+.banner{
+    height:8vw;
+    /* background: url('./Asset/BannerBack.png'); */
+    margin-bottom:1%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.8)),url('./Asset/BannerBack.png');
+    background-size: cover;
+    background-position: center center;
+}
+.bannertext{
+    font-family: 'Depixel';
+    font-size:4vw;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: -0.5vw -0.3vw black;
+    color: orange;
+}
+.container1, .container2{
+    display: flex;
+    flex-direction: row;
+    margin-top:5%;
+    font-family: 'Depixel';
+    gap: 1.5vw;
+}
+.island1desc{
+    width: 50vw;
+    font-size: 1.5vw;
+    display:block;
+    text-align: justify;
+    margin-top: 5.5%;
+}
+.container1 img{
+    width: 40vw;
+    margin-left: 5%;
+}
+.container2 img{
+    width: 40vw;
+    /* margin-left: 2vw; */
+}
+.container2 .island1desc{
+    margin-left:5vw;
+}
+
+/* Footer */
+footer{
+    /* margin-top:17vw; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Retro Gaming';
+    justify-content: center;
+    align-items: center;
+}
+.footerlogo{
+    display:flex;
+    justify-content: center;
+}
+.footerlogo img{
+    width:10vw;
+}
+.footer1{
+    text-align:center;
+    font-size:2vw;
+    font-weight: bold;
+}
+.footer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1vw;
+}
+.footer2 ul{
+    display:flex;
+    /* flex-direction: row; */
+    gap: 1.9vw;
+    margin-top: 1%;
+    font-size: 1.2vw;
+}
+.footer2 ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.footer2 .copyright{
+    font-size:1vw;
+}
+footer .footer2 ul li a{
+    display: inline-block;
+    background-color:none;
+    background-size: 0% 2px;
+}
+footer .footer2 ul li a:hover{
+    /* text-decoration: underline; */
+    background-image: linear-gradient(#000 0 0);
+    background-position: right bottom; /* OR left bottom*/
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    transition:background-size .5s;
+}
+
+
+/* Meida Query */
+
+@media (max-width:860px){
+    body{
+        height: 100vw;
+    }
+    .wholebox{
+        height: 30vw;
+    }
+    .list{
+        height: 100%;
+    }
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        /* background: blue; */
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a.active, a:hover{
+        background: none;
+        color: purple;
+        transition: all .5s ease-in;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .checkbtn{
+        width: 5vw;
+        height: 8vh;
+        display: flex;
+        justify-content:center;
+        align-content: center;
+        align-items: center;
+    }
+    .fa-solid{
+        display: flex;
+        width: 10vw;
+        height: 5vw;
+        background-image: url(./Asset/bars-solid.svg);
+        background-repeat: no-repeat;
+        color: black;
+    }
+}
+@media (max-width: 430px) {
+    label.logo{
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    nav ul{
+        background: white;
+    }
+    .checkbtn{
+        width: 5vw;
+        height: 8vh;
+        display: flex;
+        justify-content:center;
+        align-content: center;
+    }
+    .fa-solid{
+        display: flex;
+        width: 100vh;
+    }
+    .logo img{
+        float: left;
+        position: relative;
+        left: 2vw;
+    }
+    footer{
+        gap: 1vw;
+    }
+    footer .footer1 .logoname{
+        font-size:2.5vw;
+    }
+    footer .footer2 ul{
+        flex-direction: column;
+        font-size: 2vw;
+    }
+    footer .footer2{
+        gap: 2vw;
+    }
+    footer .footer2 .copyright{
+        font-size:1.5vw;
+    }
+    footer .footer2 ul li a{
+        background:none;
+    }
+}

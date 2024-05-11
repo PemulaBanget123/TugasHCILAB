@@ -1,0 +1,459 @@
+@font-face{
+    font-family: 'Retro Gaming';
+    src: url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.eot');
+    src: url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.woff')format('woff'), url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.woff2')format('woff2'), url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.ttf')format('truetype'),url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.svg')format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Depixel';
+    src: url('./Font/depixel/depixelbreit.woff') format("woff");
+    src: url('./Font/depixel/DePixelBreit.otf') format("opentype"), url('./Font/depixel/depixelbreit.woff2') format("woff"), url('./Font/depixel/DePixelBreit.ttf');
+}
+
+
+/* body{
+    min-height: 100vw;
+} */
+/* NAVBAR */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+nav ul li{
+    font-family: 'Retro Gaming';
+    display: inline-block;
+    line-height: 80px;
+}
+nav{
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    z-index: 1000;
+}
+label.logo{
+    color: black;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bold;  
+}
+label.logo img{
+    width: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    background: white;
+    /* z-index: 100; */
+}
+nav ul li a{
+    color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    /* padding-left: 15px; */
+    /* margin-left: 10px; */
+    /* width: 90px; */
+    /* gap: 9px; */
+    padding: 5px;
+}
+nav ul li a.active,nav ul li a:hover{
+    background-color: #b96a59;
+    color: white;
+    transition: all .5s ease-in;
+}
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+
+/* isian */
+.banner{
+    height:8vw;
+    /* background: url('./Asset/BannerBack.png'); */
+    margin-bottom:1%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.8)),url('./Asset/BannerBack.png');
+    background-size: cover;
+    background-position: center center;
+}
+.bannertext{
+    font-family: 'Depixel';
+    font-size:4vw;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: -0.5vw -0.3vw black;
+    color: orange;
+}
+.boxcontainer{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid; */
+    height: 20vh;
+    justify-content: center;
+    gap: 1vw;
+    /* margin-bottom: 4vw; */
+}
+.box{
+    width: 20vh;
+    cursor: pointer;
+    opacity: 50%;
+    display: flex;
+}
+.box:hover, .box.active{
+    transition:all .3s ease-in-out;
+    opacity: 100%;
+    transform: scale(1.2);
+}
+
+.wholebox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vw;
+    /* min-height: f; */
+    max-height: max-content;
+    /* margin-top: 1%; */
+}
+
+.wholebox .list .container{
+    position: absolute;
+    /* overflow: hidden; */
+    /* inset: 0 0 0 0; */
+    opacity: 0;
+    transition: .5s;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* gap: 90px; */
+    justify-content: center;
+    align-items: center;
+}
+.wholebox .list .container.active{
+    opacity: 1;
+}  
+.char1desc{
+    width: 70%;
+    height: max-content;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+.list{
+    width: max-content;
+}
+.char1name, .char2name, .char3name{
+    font-family: 'Retro Gaming';
+    text-align: center;
+    font-size: 3.5vw;
+    background-color:red;
+    border-radius: 5px;
+    width: 20vw;
+    height: 5vw;
+    align-content: center;
+    color: white;
+}
+.char2name{
+    /* font-size: 2.5vw; */
+    /* width: 15vw; */
+    background-color: orange;
+}
+.char3name{
+    background-color:gray;
+}
+.char1info{
+    /* display: block; */
+    font-family: 'Depixel';
+    font-size: 1.4vw;
+    text-align: justify;
+}
+.char1 img{
+    width: 30vw;
+}
+.char1{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    gap: 2vw;
+}
+.char1 label{
+    font-family: 'Retro Gaming';
+    font-size: 3vw;
+}
+.char1image{
+    display: flex;
+    flex-direction:row;
+    gap: 10vw;
+}
+
+/* FOOTER */
+footer{
+    /* margin-top:17vw; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Retro Gaming';
+    justify-content: center;
+    align-items: center;
+}
+.footerlogo{
+    display:flex;
+    justify-content: center;
+}
+.footerlogo img{
+    width:10vw;
+}
+.footer1{
+    text-align:center;
+    font-size:2vw;
+    font-weight: bold;
+}
+.footer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1vw;
+}
+.footer2 ul{
+    display:flex;
+    gap: 1.9vw;
+    margin-top: 1%;
+    font-size: 1.2vw;
+}
+.footer2 ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.footer2 .copyright{
+    font-size:1vw;
+}
+footer .footer2 ul li a{
+    display: inline-block;
+    background-color:none;
+    background-size: 0% 2px;
+}
+footer .footer2 ul li a:hover{
+    /* text-decoration: underline; */
+    background-image: linear-gradient(#000 0 0);
+    background-position: right bottom; /* OR left bottom*/
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    transition:background-size .5s;
+}
+
+/* Meida Query */
+
+@media (max-width:860px){
+    /* body{
+        height: 10vw;
+    } */
+    .wholebox{
+        height: 90vw;
+    }
+    .list{
+        height: 100%;
+    }
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        /* background: blue; */
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a.active, a:hover{
+        background: none;
+        color: purple;
+        transition: all .5s ease-in;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .checkbtn{
+        width: 5vw;
+        height: 8vh;
+        display: flex;
+        justify-content:center;
+        align-content: center;
+        align-items: center;
+    }
+    .fa-solid{
+        display: flex;
+        width: 10vw;
+        height: 5vw;
+        background-image: url(./Asset/bars-solid.svg);
+        background-repeat: no-repeat;
+        color: black;
+    }
+    .boxcontainer{
+        /* margin-top: 10%; */
+        height:10vh;
+        justify-items: center;
+    }
+    .box{
+        width:10vh;
+    }
+    .wholebox{
+        height:105vw;
+    }
+    .char1 img{
+        width:30vw;
+    }
+    .container{
+        /* height:100vw; */
+    }
+    .char1info{
+        font-size:2vw;
+    }
+}
+
+@media (max-width: 430px) {
+        label.logo{
+            padding-left: 50px;
+        }
+        nav ul li a{
+            font-size: 16px;
+        }
+        nav ul{
+            background: white;
+            /* height: 50vh; */
+        }
+        .checkbtn{
+            width: 5vw;
+            height: 8vh;
+            display: flex;
+            justify-content:center;
+            align-content: center;
+        }
+        .fa-solid{
+            display: flex;
+            width: 100vh;
+            /* height: 5vw; */
+            /* font-size: 100px; */
+            /* background-image: url(./Asset/bars-solid.svg); */
+        }
+        .logo img{
+            float: left;
+            position: relative;
+            left: 2vw;
+        }
+        footer{
+            /* margin-top: 1vw; */
+            gap: 1vw;
+        }
+        footer .footer1 .logoname{
+            font-size:2.5vw;
+        }
+        footer .footer2 ul{
+            flex-direction: column;
+            font-size: 2vw;
+        }
+        footer .footer2{
+            gap: 2vw;
+        }
+        footer .footer2 .copyright{
+            font-size:1.5vw;
+        }
+        footer .footer2 ul li a{
+            background:none;
+        }
+        .char1 img{
+            width: 18vh;
+        }
+        .wholebox{
+            height: 140vw;
+            /* height: max-content; */
+            /* height: 200vw; */
+        }
+        .list{
+            height: max-content;
+            width: max-content;
+        }
+        body{
+            height:200vw;
+        }
+        .wholebox{
+            /* background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.9)),url('./Asset/BackgroundHP.png'); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* height: 9000px; */
+            justify-content: center;
+            min-height: 200vw;
+        }
+        .container{
+            background-image:none;
+            /* min-height: 130vw; */
+            width: max-content;
+        }
+        .boxcontainer .box{
+            width:20vw;
+            height: 20vw;
+            /* margin-bottom: -10vw; */
+        }
+        .boxcontainer{
+            height: 20vw;
+            /* margin-top: 5vw; */
+        }
+        .wholebox .list{
+            display: flex;
+            justify-content: center;
+        }
+        .wholebox .list .container{
+            display: flex;
+            flex-direction: column;
+            /* gap: 10px; */
+        }
+        .char1desc{
+            text-align: center;
+            width:100%;
+            height: max-content;
+        }
+        .char1info{
+            width:80vw;
+            font-size:3vw;
+        }
+        .container{
+            border:none;
+        }
+}
