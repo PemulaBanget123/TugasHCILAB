@@ -109,32 +109,81 @@ nav ul li a.active,nav ul li a:hover{
     text-shadow: -0.5vw -0.3vw black;
     color: orange;
 }
-.container1, .container2{
+.container1,.container2{
     display: flex;
     flex-direction: row;
-    margin-top:5%;
     font-family: 'Depixel';
-    gap: 1.5vw;
+    /* gap: 1.5vw; */
+}
+.section1,.section2,.section3{
+    margin-top:5%;
+}
+.afterbanner{
+    margin-top:3vw;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+}
+.origin{
+    font-family:'Depixel';
+}
+.afterbanner img{
+    width: 40vw;
 }
 .island1desc{
-    width: 50vw;
+    width: 40vw;
     font-size: 1.5vw;
     display:block;
     text-align: justify;
-    margin-top: 5.5%;
+    /* margin-top: 5.5%; */
+}
+.section1 .container1{
+    gap: 5vw;
 }
 .container1 img{
-    width: 40vw;
+    width: 45vw;
     margin-left: 5%;
 }
-.container2 img{
-    width: 40vw;
-    /* margin-left: 2vw; */
-}
-.container2 .island1desc{
+.section2 .container2 .island1desc{
     margin-left:5vw;
+    /* margin-right: 0; */
 }
+.container2{
+    gap: 5vw;
+}
+.section2 .container2 img{
+    /* margin-right: 2vw; */
+    width: 45vw;
+}
+/* .container2 .island1desc{
+    margin-left:5vw;
+} */
 
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all .2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.section3{
+    display: flex;
+    justify-content:center;
+}
+.imgtext{
+    display: flex;
+    flex-direction:column;
+}
+.imgtext img{
+    width: 50vw;
+}
+.imgtext label{
+    font-family: 'Depixel';
+}
 /* Footer */
 footer{
     /* margin-top:17vw; */
@@ -196,9 +245,9 @@ footer .footer2 ul li a:hover{
 /* Meida Query */
 
 @media (max-width:860px){
-    body{
+    /* body{
         height: 100vw;
-    }
+    } */
     .wholebox{
         height: 30vw;
     }
@@ -252,6 +301,52 @@ footer .footer2 ul li a:hover{
         background-repeat: no-repeat;
         color: black;
     }
+    .afterbanner img{
+        width: 70vw;
+    }
+    .afterbanner{
+        gap: 4vw;
+    }
+    .container1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container1 img{
+        margin-left:0;
+        width: 80vw;
+    }
+    .container2{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .section2 .container2 .island1desc{
+        margin-right: 0;
+        margin-left: 0vw;
+    }
+    .section2 .container2 img{
+        width: 80vw;
+    }
+    .island1desc{
+        width: 90vw;
+        font-size:3vw;
+        text-align: center;
+    }
+    .origin{
+        width: 90vw;
+        text-align:center;
+        font-size: 3vw;
+    }
+    .imgtext{
+        align-items: center;
+    }
+    .imgtext img{
+        width: 80vw;
+    }
+    .lasttext{
+        font-size: 3vw;
+        width: 90vw;
+        text-align:center;
+    }
 }
 @media (max-width: 430px) {
     label.logo{
@@ -297,5 +392,28 @@ footer .footer2 ul li a:hover{
     }
     footer .footer2 ul li a{
         background:none;
+    }
+    /* 
+    .container1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container1 img{
+    margin-left:0;
+        width: 90vw;
+    }
+    .container2{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .section2 .container2 .island1desc{
+        margin-right: 0;
+        margin-left: 0vw;
+    }
+    .section2 .container2 img{
+        width: 80vw;
+    } */
+    .section3{
+        margin-bottom: 7vw;
     }
 }
