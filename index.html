@@ -1,31 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page</title>
         <link rel="stylesheet" href="homestyle.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid"></i>
             </label>
-            <label class="logo">ThisIsLogo</label>
+            <label class="logo"><img src="./Asset/zendragon-biglogo.png"></label>
             <ul>
-                <li><a class="active" href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="character2.html">Character</a></li>
-                <li><a href="#">Dragon Class</a></li>
-                <li><a href="#">Isle of Berk</a></li>
+                <li><a href="dragon-class.html">Dragon Class</a></li>
+                <li><a href="isleofberk.html">Isle of Berk</a></li>
                 <li><a href="register.html">Register</a></li>
             </ul>
         </nav>
     </header>
-    <label class="ayam">
-        ashdkasnjdlsakld    
-    </label>
+
+    <section class="section1">
+        <div class="container1">
+            <div class="bannerimg"><img src="./Asset/DragonBanner.png"></div>
+            <div class="bannertext">
+                <h2>Zen DragoN</h2>
+                <label>Where Dragons and Humans Embrace Unity and Peace</label>
+            </div>
+        </div>
+    </section>
+    <div class="sectionborder reveal">
+        <label class="section2title">Characters Who Brings Unity</label>
+    </div>
+    <section class="section2">
+        <div class="container2 reveal">
+            <div class="characters">
+                <img src="./Asset/BannerChar1.png">
+                <img src="./Asset/BannerChar2.png">
+                <img src="./Asset/BannerChar3.png">
+                <img src="./Asset/BannerChar42.png">
+            </div>
+            <label class="label1">Meet the remarkable characters who forged an unbreakable bond between humans and dragons, heralding a new era of unity and peace.<br>Interested?</label>
+            <button type="button" onclick="window.location.href='character2.html'">View More</button>
+        </div>
+    </section>
+    <div class="sectionborder2 reveal">
+        <label class="section2title">Dragon Classes</label>
+    </div>
+    <section class="section3">
+        <div class="container3 reveal">
+            <div class="flag">
+                <img src="./Asset/BannerClass1.png">
+                <img src="./Asset/BannerClass2.png">
+                <img src="./Asset/BannerClass3.png">
+            </div>
+            <label class="label3">Behold the dragon classes, honed in the crucible of the academy, where dragons and soaring marvels learn the art of cooperation.</label>
+            <button type="button" onclick="window.location.href='dragon-class.html'">View More</button>
+        </div>
+    </section>
+    <div class="sectionborder2 reveal">
+        <label class="section2title">Isle Of Berk</label>
+    </div>
+    <section class="section4">
+        <div class="container4 reveal">
+            <img src="./Asset/Island1.png">
+            <label class="label4">Embark on a captivating journey through the creation of Zen Dragon Academy, where Humans and Dragons forged unity and harmony.</label>
+            <button type="button" onclick="window.location.href='isleofberk.html'">View More</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer1">
+            <div class="footerlogo"><img src="./Asset/zendragon-biglogo.png"></div>
+            <label class="logoname">Zen Dragon</label>
+        </div>
+        <div class="footer2">
+            <ul class="list2">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="character2.html">Character</a></li>
+                <li><a href="dragon-class.html">Dragon Class</a></li>
+                <li><a href="isleofberk.html">Isle of Berk</a></li>
+            </ul>
+            <label class="copyright">
+                ©TYPE-PPTI / ZEN DRAGON PROJECT<br>
+                ©Copyright 2024 Zen Dragon Academy
+            </label>
+        </div>
+    </footer>
+<script src="islescript.js"></script>
 </body>
 </html>
