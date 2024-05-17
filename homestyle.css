@@ -1,14 +1,20 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
-@import url(https://db.onlinewebfonts.com/c/4c19fc875e7ba1e6831129de3ab5ac0b?family=Retro+Gaming);
+@font-face{
+    font-family: 'Retro Gaming';
+    src: url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.eot');
+    src: url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.woff')format('woff'), url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.woff2')format('woff2'), url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.ttf')format('truetype'),url('./Font/RetroGaming/4c19fc875e7ba1e6831129de3ab5ac0b.svg')format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
     font-family: 'Depixel';
     src: url('./Font/depixel/depixelbreit.woff') format("woff");
     src: url('./Font/depixel/DePixelBreit.otf') format("opentype"), url('./Font/depixel/depixelbreit.woff2') format("woff"), url('./Font/depixel/DePixelBreit.ttf');
 }
 body{
-    background: blue;
+    min-height:100%;
+    min-width: 100%;
 }
-
 /* NAVBAR */
 *{
     padding: 0;
@@ -29,6 +35,7 @@ nav{
     height: 80px;
     width: 100%;
     position: sticky;
+    z-index: 1000;
 
 }
 label.logo{
@@ -38,6 +45,9 @@ label.logo{
     padding: 0 20px;
     font-weight: bold;  
 }
+label.logo img{
+    width: 80px;
+}
 nav ul{
     float: right;
     margin-right: 20px;
@@ -46,6 +56,8 @@ nav ul{
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 20px;
+    background: white;
+    /* z-index: 100; */
 }
 nav ul li a{
     color: black;
@@ -58,8 +70,8 @@ nav ul li a{
     /* gap: 9px; */
     padding: 5px;
 }
-a.active,a:hover{
-    background-color: purple;
+nav ul li a.active,nav ul li a:hover{
+    background-color: #b96a59;
     color: white;
     transition: all .5s ease-in;
 }
@@ -75,28 +87,247 @@ a.active,a:hover{
 #check{
     display: none;
 }
-.ayam{
-    font-family: 'Depixel';
-    font-weight: bolder;
-}
-@media (max-width: 420px) {
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
+
+.list{
+    width: 100%;
+    /* height:800px; */
 }
 
+
+/* ISIAN */
+.container1{
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.8)),url('./Asset/BannerBack.png');
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    width: 100%;
+    /* background-repeat: no-repeat; */
+}
+.bannertext{
+    display: flex;
+    flex-direction:column;
+    font-family: 'Retro Gaming';
+    font-weight: bolder;
+    font-size:4vw;
+    justify-content: center;
+    text-shadow: -0.5vw -0.3vw orange;
+    color: black;
+}
+.bannertext label{
+    font-size:2vw;
+    width: 40vw;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-family: 'Retro Gaming';
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)), url('./Asset/BannerBack.png');
+    background-size: cover;
+    background-position: center center;
+    gap: 1.5vw;
+}
+.section2title{
+    font-family: 'Retro Gaming';
+    font-weight: bolder;
+    font-size: 4vw;
+    position: relative;
+    /* top: 2vw; */
+    text-shadow: -0.5vw -0.3vw orange;
+    color: black;
+    width: 100vw;
+}
+.sectionborder{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    bottom: 1.5vw;
+}
+.sectionborder2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    margin-top: 1vw;   
+}
+.characters{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4vw;
+}
+.characters img{
+    width: 8vw;
+    /* height: 50vh; */
+    opacity: 90%;
+    cursor: pointer;
+    /* border:1px solid; */
+}
+.characters img:hover{
+    transform: scale(1.1);
+    opacity: 100%;
+    /* opacity: 0.5; */
+    /* opacity: darken; */
+    filter: brightness(65%);
+    transition: all .3s ease-in;
+}
+.label1{
+    font-family: 'Depixel';
+    text-align: center;
+    font-size:2vw;
+    font-weight: bolder;
+    width: 80vw;
+}
+.container2 button, .container3 button, .container4 button{
+    width: 20vw;
+    font-family: 'Depixel';
+    font-weight: bolder;
+    height: 4vw;
+    border-radius: 4px;
+    font-size: 2vw;
+    cursor: pointer;
+    border: none;
+    background-color: #b96a59;
+}
+.container2 button:hover, .container3 button:hover ,.container4 button:hover{
+    background-color: burlywood;
+    transform: scale(1.1);
+    transition: all .3s ease-in;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all .2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container3{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)), url('./Asset/BannerBack.png');
+    background-size: cover;
+    background-position: center center;
+    gap: 2vw;
+}
+.flag{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    justify-content: center;
+}
+.flag img{
+    width: 20vw;
+}
+.container3 label{
+    font-family: 'Depixel';
+    font-weight: bolder;
+    font-size: 2vw;
+}
+.label3, .label4{
+    width: 80vw;
+    text-align: center;
+}
+.container4{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)), url('./Asset/BannerBack.png');
+    background-size: cover;
+    background-position: center center;
+    gap: 2vw;
+}
+.container4 img{
+    width: 30vw;
+}
+.label4{
+    font-family:'Depixel';
+    font-size: 2vw;
+    font-weight:bolder;
+}
+/* FOOTER */
+footer{
+    /* margin-top:17vw; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Retro Gaming';
+    justify-content: center;
+    align-items: center;
+}
+.footerlogo{
+    display:flex;
+    justify-content: center;
+}
+.footerlogo img{
+    width:10vw;
+}
+.footer1{
+    text-align:center;
+    font-size:2vw;
+    font-weight: bold;
+}
+.footer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1vw;
+}
+.footer2 ul{
+    display:flex;
+    gap: 1.9vw;
+    margin-top: 1%;
+    font-size: 1.2vw;
+}
+.footer2 ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.footer2 .copyright{
+    font-size:1vw;
+}
+footer .footer2 ul li a{
+    display: inline-block;
+    background-color:none;
+    background-size: 0% 2px;
+}
+footer .footer2 ul li a:hover{
+    background-image: linear-gradient(#000 0 0);
+    background-position: right bottom;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    transition:background-size .5s;
+}
+
+/* Media Query */
 @media (max-width:860px){
+    /* body{
+        height: 100vw;
+    } */
+    .wholebox{
+        height: 30vw;
+    }
+    .list{
+        height: 100%;
+    }
     .checkbtn{
         display: block;
     }
-    ul{
+    nav ul{
         position: fixed;
         width: 100%;
-        height: 100vh;
         /* background: blue; */
         top: 80px;
         left: -100%;
@@ -121,5 +352,70 @@ a.active,a:hover{
     }
     #check:checked ~ ul{
         left: 0;
+    }
+    .checkbtn{
+        width: 5vw;
+        height: 8vh;
+        display: flex;
+        justify-content:center;
+        align-content: center;
+        align-items: center;
+    }
+    .fa-solid{
+        display: flex;
+        width: 10vw;
+        height: 5vw;
+        background-image: url(./Asset/bars-solid.svg);
+        background-repeat: no-repeat;
+        color: black;
+    }
+    .bannerimg img{
+        width: 50vw;
+    }
+}
+@media (max-width: 420px) {
+    label.logo{
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    nav ul{
+        background: white;
+    }
+    .checkbtn{
+        width: 5vw;
+        height: 8vh;
+        display: flex;
+        justify-content:center;
+        align-content: center;
+    }
+    .fa-solid{
+        display: flex;
+        width: 100vh;
+    }
+    .logo img{
+        float: left;
+        position: relative;
+        left: 2vw;
+    }
+    footer{
+        gap: 1vw;
+    }
+    footer .footer1 .logoname{
+        font-size:2.5vw;
+    }
+    footer .footer2 ul{
+        flex-direction: column;
+        font-size: 2vw;
+    }
+    footer .footer2{
+        gap: 2vw;
+    }
+    footer .footer2 .copyright{
+        font-size:1.5vw;
+    }
+    footer .footer2 ul li a{
+        background:none;
     }
 }
