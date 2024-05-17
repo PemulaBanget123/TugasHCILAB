@@ -13,7 +13,10 @@
     src: url('./Font/depixel/depixelbreit.woff') format("woff");
     src: url('./Font/depixel/DePixelBreit.otf') format("opentype"), url('./Font/depixel/depixelbreit.woff2') format("woff"), url('./Font/depixel/DePixelBreit.ttf');
 }
+body{
+    position: relative;
 
+}
 
 /* NAVBAR */
 *{
@@ -117,15 +120,9 @@ nav ul li a.active,nav ul li a:hover{
 .wholebox{
     display: flex;
     flex-direction: row;
-    /* position: relative; */
     width: 100%;
     min-height: 55vw;
     margin-top: 1%;
-    /* background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.8)),url('./Asset/Backgroundpick.png');
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size:cover;
-    overflow: hidden; */
 }
 
 .wholebox .list .container{
@@ -202,14 +199,25 @@ footer{
     font-family: 'Retro Gaming';
     justify-content: center;
     align-items: center;
+    gap: 1.4vw;
+    padding-bottom: 1.3vw;
+    background: #000;
+    position: absolute;
+    width: 100%;
+    /* bottom: 0; */
+    /* margin-top: 3vw; */
 }
 .footerlogo{
     display:flex;
     justify-content: center;
+    position: relative;
 }
+
 .footerlogo img{
     width:10vw;
+    margin-top: 1vw;
 }
+
 .footer1{
     text-align:center;
     font-size:2vw;
@@ -220,17 +228,18 @@ footer{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 1vw;
+    gap: 2vw;
 }
 .footer2 ul{
     display:flex;
+    /* flex-direction: row; */
     gap: 1.9vw;
     margin-top: 1%;
     font-size: 1.2vw;
 }
 .footer2 ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 .footer2 .copyright{
@@ -243,18 +252,28 @@ footer .footer2 ul li a{
 }
 footer .footer2 ul li a:hover{
     /* text-decoration: underline; */
-    background-image: linear-gradient(#000 0 0);
-    background-position: right bottom; /* OR left bottom*/
+    background-image: linear-gradient(orange 0 0);
+    background-position: right bottom;
     background-size: 100% 2px;
+    color: orange;
     background-repeat: no-repeat;
     transition:background-size .5s;
+}
+.copyright{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 0.3vw;
+}
+.logoname{
+    color: white;
 }
 
 /* Meida Query */
 
 @media (max-width:860px){
     body{
-        height: 100vw;
+        height: 160vw;
     }
     .wholebox{
         height: 30vw;
@@ -318,20 +337,28 @@ footer .footer2 ul li a:hover{
         width:10vh;
     }
     .wholebox{
-        height:105vw;
+        height:100vw;
     }
     .char1 img{
         width:30vw;
     }
     .container{
         height:100vw;
+        gap: 5vw;
     }
     .char1info{
         font-size:2vw;
     }
+    footer{
+        bottom:0;
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 430px) {
+        body{
+            height:230vw;
+        }
         label.logo{
             padding-left: 50px;
         }
@@ -389,9 +416,9 @@ footer .footer2 ul li a:hover{
         .list{
             height: 100%;
         }
-        body{
+        /* body{
             height:200vw;
-        }
+        } */
         .wholebox{
             background-image: linear-gradient(rgba(255 , 255 , 255 , 0.1), rgba(255 , 255 , 255 , 0.9)),url('./Asset/BackgroundHP.png');
             background-size: cover;
