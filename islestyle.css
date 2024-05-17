@@ -93,7 +93,7 @@ nav ul li a.active,nav ul li a:hover{
 .banner{
     height:8vw;
     /* background: url('./Asset/BannerBack.png'); */
-    margin-bottom:1%;
+    /* margin-bottom:1%; */
     width: 100%;
     text-align: center;
     align-content: center;
@@ -113,23 +113,28 @@ nav ul li a.active,nav ul li a:hover{
     display: flex;
     flex-direction: row;
     font-family: 'Depixel';
-    /* gap: 1.5vw; */
 }
 .section1,.section2,.section3{
     margin-top:5%;
 }
 .afterbanner{
-    margin-top:3vw;
+    /* margin-top:3vw; */
     display: flex;
     justify-content:center;
     flex-direction: column;
     align-items: center;
+    gap: 2vw;
 }
 .origin{
     font-family:'Depixel';
+    width: 80vw;
+    font-size: 1.5vw;
+    text-align: center;
 }
 .afterbanner img{
     width: 40vw;
+    margin-top: 3vw;
+    border-radius: 25px;
 }
 .island1desc{
     width: 40vw;
@@ -144,6 +149,7 @@ nav ul li a.active,nav ul li a:hover{
 .container1 img{
     width: 45vw;
     margin-left: 5%;
+    border-radius: 25px;
 }
 .section2 .container2 .island1desc{
     margin-left:5vw;
@@ -155,6 +161,7 @@ nav ul li a.active,nav ul li a:hover{
 .section2 .container2 img{
     /* margin-right: 2vw; */
     width: 45vw;
+    border-radius: 25px;
 }
 /* .container2 .island1desc{
     margin-left:5vw;
@@ -177,13 +184,28 @@ nav ul li a.active,nav ul li a:hover{
 .imgtext{
     display: flex;
     flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
 }
 .imgtext img{
     width: 50vw;
+    border-radius: 25px;
 }
 .imgtext label{
     font-family: 'Depixel';
+    text-align: center;
+    width: 80vw;
+    font-size: 1.5vw;
 }
+.bg{
+    background-image: linear-gradient(rgb(255, 255, 255),rgba(255, 255, 255, 0.306) ,rgba(255, 255, 255, 0.023)),url('./Asset/IsleBack.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220vw;
+}
+
 /* Footer */
 footer{
     /* margin-top:17vw; */
@@ -192,14 +214,22 @@ footer{
     font-family: 'Retro Gaming';
     justify-content: center;
     align-items: center;
+    gap: 1.4vw;
+    padding-bottom: 1.3vw;
+    background: #000;
+    /* margin-top: 3vw; */
 }
 .footerlogo{
     display:flex;
     justify-content: center;
+    position: relative;
 }
+
 .footerlogo img{
     width:10vw;
+    margin-top: 1vw;
 }
+
 .footer1{
     text-align:center;
     font-size:2vw;
@@ -210,7 +240,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 1vw;
+    gap: 2vw;
 }
 .footer2 ul{
     display:flex;
@@ -221,7 +251,7 @@ footer{
 }
 .footer2 ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 .footer2 .copyright{
@@ -234,13 +264,22 @@ footer .footer2 ul li a{
 }
 footer .footer2 ul li a:hover{
     /* text-decoration: underline; */
-    background-image: linear-gradient(#000 0 0);
-    background-position: right bottom; /* OR left bottom*/
+    background-image: linear-gradient(orange 0 0);
+    background-position: right bottom;
     background-size: 100% 2px;
+    color: orange;
     background-repeat: no-repeat;
     transition:background-size .5s;
 }
-
+.copyright{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 0.3vw;
+}
+.logoname{
+    color: white;
+}
 
 /* Meida Query */
 
@@ -297,6 +336,7 @@ footer .footer2 ul li a:hover{
         display: flex;
         width: 10vw;
         height: 5vw;
+        /* margin-top: 1vw; */
         background-image: url(./Asset/bars-solid.svg);
         background-repeat: no-repeat;
         color: black;
@@ -310,6 +350,9 @@ footer .footer2 ul li a:hover{
     .container1{
         flex-direction: column;
         align-items: center;
+    }
+    .section1{
+        margin-bottom: 7vw;
     }
     .container1 img{
         margin-left:0;
@@ -327,25 +370,28 @@ footer .footer2 ul li a:hover{
         width: 80vw;
     }
     .island1desc{
-        width: 90vw;
+        width: 75vw;
         font-size:3vw;
         text-align: center;
     }
     .origin{
-        width: 90vw;
+        width: 75vw;
         text-align:center;
         font-size: 3vw;
     }
     .imgtext{
         align-items: center;
+        gap: 5vw;
     }
     .imgtext img{
         width: 80vw;
     }
-    .lasttext{
+    .imgtext label{
         font-size: 3vw;
         width: 90vw;
-        text-align:center;
+    }
+    .bg{
+        height:640vw;
     }
 }
 @media (max-width: 430px) {
