@@ -2,79 +2,122 @@ let form = document.getElementById("registerform")
 
 form.addEventListener("submit",function(e) {
     e.preventDefault()
-    
-    //Min 8 char, dan min 2 kata
-    let username = document.getElementById("username")
 
-    // ends with '@gmail.com'
+    let firstname = document.getElementById("firstname")
+    let lastname = document.getElementById("lastname")
     let email = document.getElementById("email")
-    // min 6 char & contains at least 1 digit, 1 capital letter, 1 lowercase letter
-    let password = document.getElementById("password")
-    //equals with password
-    let confirm = document.getElementById("confirm_password")
-    //not empty
-    let dob = document.getElementById("dob")
-    //not empty
+    let address = document.getElementById("address")
     let gender = document.getElementById("gender")
-    //not empty
-    let plan = form.plan
-
+    let agreeTerms = document.getElementById("agree_terms");
     let errorText = document.getElementById("error-txt")
-    //reset error text
     errorText.innerText = ""
 
-    if(username.value.length <8){
-        errorText.innerText = "Username must atleast 8 characters"
-    }else if(username.value.trim().split(" ").length<2){
-        //" aku jason " => ("aku", "jason") // kalau 2 kata
-        errorText.innerText = "Username must at least 2 words"
+    firstname.style.borderColor = "";
+    lastname.style.borderColor = "";
+    email.style.borderColor = "";
+    address.style.borderColor = "";
+    gender.style.borderColor = "";
+    agreeTerms.nextElementSibling.style.color = "";
+    
+    if(firstname.value.length <1){
+        errorText.innerText = "First name must not be empty";
+        firstname.style.borderColor ="red";
     }
-    else if(!email.value.endsWith("@gmail.com")){
-        errorText.innerText = "Email must ends with @gmail.com"
+    else if(!checkCapital(firstname.value)){
+        errorText.innerText = "First character of first name must be capital"
+        firstname.style.borderColor = "red";
     }
-    else if(password.value.length<6){
-        errorText.innerText = "Password must be at least 6 characters"
+    else if(!validateFirstName(firstname.value)){
+        errorText.innerText = "First name must not have any special characters"
+        firstname.style.borderColor = "red";
     }
-    else if(!validatepassword(password.value)){
-        errorText.innerText = "Password must at least contains 1 digit, 1 capital letter, 1 lowercase letter"
+    else if(lastname.value.length > 0 && !checkCapital(lastname.value)){
+        errorText.innerText = "First character of last name must be capital"
+        lastname.style.borderColor = "red";
     }
-    else if(password.value != confirm.value){
-        errorText.innerText = "Confirm Password must match with the Password"
+    else if (!validateLastName(lastname.value)){
+        errorText.innerText = "Last name must not have any special characters"
+        lastname.style.borderColor = "red";
     }
-    else if(dob.value =="" || dob.value == undefined){
-        errorText.innerText = "DOB must be filled"
-    }else if(gender.value=="" || gender.value == undefined){
-        errorText.innerText = "Gender must be filled"
-    }else if(plan.value =="" || plan.value==undefined){
-        errorText.innerText = "Plan must be filled"
-    }else{
-        let checkbox = document.getElementById("agree_terms")
-        if(!checkbox.checked){
-            errorText.innerText = "You must agree with Terms and Condition"
-        }else{
-            //Validasi sudah lewat semua
-            alert("Register Complete. Now enjoy this")
-            window.open("https://bit.ly/face-mc-shooty","_blank")
-        }
+    else if (address.value.length < 1){
+        errorText.innerText = "Address must not be empty"
+        address.style.borderColor = "red";
     }
-    alert("Submit!")  
+    else if(email.value.length<1){
+        errorText.innerText = "Email must not be empty";
+        email.style.borderColor = "red";
+    }
+    // else if(checkSpace(email.value)){
+    //     errorText.innerText = "Email must not have any spaces";
+    //     email.style.borderColor = "red";
+    // }
+    else if(!email.value.endsWith("@zenAcademy.com")){
+        errorText.innerText = "Email must ends with @zenAcademy.com";
+        email.style.borderColor = "red";
+    }
+    else if(gender.value=="" || gender.value == undefined){
+        errorText.innerText = "Gender must be chosen"
+        gender.style.borderColor = "red";
+    } 
+    else if (!agreeTerms.checked) {
+        errorText.innerText = "You must agree to the terms and conditions";
+        agreeTerms.nextElementSibling.style.color = "red";
+    }
+    else{
+        window.location.href = "index.html"
+    }
 })
 
-function validatepassword(input){
-    let containDigits = false
-    let containCapital = false
-    let containLowerCase = false
+// function checkSpace(input){
+//     let valid = false;
+//     for(let i=0; i<input.length; i++){
+//         const a = input[i];
+//         if(a == ' '){
+//             valid = true;
+//             return valid;
+//         }
+//     }
+//     return valid;
+// }
+function checkCapital(input){
+    let validation = false;
+    let a = input[0];
+
+    if(a >= "A" && a <= "Z"){
+        validation = true;
+        return validation;
+    }
+    return validation;
+}
+function validateFirstName(input){
+    let validation = false;
     for(let i = 0; i < input.length; i++){
-        const c = input[i];
-        if(c >= '0' && c <= '9'){
-            containDigits = true
-        }
-        if(c >= 'A' && c <= 'Z'){
-            containCapital = true
-        }
-        if(c >= 'a' && c <= 'z'){
-            containLowerCase = true
+        const a = input[i];
+        if((a >= 'a' && a <='z') || (a >='A' && a<='Z') || (a==' ')){
+            validation = true;
+        }else{
+            validation = false;
+            return validation;
         }
     }
-    return containDigits && containCapital && containLowerCase
+    return validation;
+}
+function validateLastName(input){
+    let correct = false;
+    if(input.length == 0){
+        correct = true;
+        return correct;
+    }else{
+        let validation = false;
+        for(let i = 0; i < input.length; i++){
+            const a = input[i];
+            if((a >= 'a' && a <='z') || (a >='A' && a<='Z') || (a==' ')){
+                validation = true;
+            }else{
+                validation = false;
+                return validation;
+            }
+        }
+        return validation;
+    }
 }
