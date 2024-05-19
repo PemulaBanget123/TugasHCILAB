@@ -221,19 +221,30 @@ nav ul li a.active,nav ul li a:hover{
 /* FOOTER */
 footer{
     /* margin-top:17vw; */
+    position: absolute;
+    width: 100%;
     display: flex;
     flex-direction: column;
     font-family: 'Retro Gaming';
     justify-content: center;
     align-items: center;
+    gap: 1.4vw;
+    padding-bottom: 1.3vw;
+    background: #000;
+    /* bottom: 0; */
+    /* margin-top: 3vw; */
 }
 .footerlogo{
     display:flex;
     justify-content: center;
+    position: relative;
 }
+
 .footerlogo img{
     width:10vw;
+    margin-top: 1vw;
 }
+
 .footer1{
     text-align:center;
     font-size:2vw;
@@ -244,17 +255,18 @@ footer{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 1vw;
+    gap: 2vw;
 }
 .footer2 ul{
     display:flex;
+    /* flex-direction: row; */
     gap: 1.9vw;
     margin-top: 1%;
     font-size: 1.2vw;
 }
 .footer2 ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 .footer2 .copyright{
@@ -266,19 +278,44 @@ footer .footer2 ul li a{
     background-size: 0% 2px;
 }
 footer .footer2 ul li a:hover{
-    background-image: linear-gradient(#000 0 0);
+    /* text-decoration: underline; */
+    background-image: linear-gradient(orange 0 0);
     background-position: right bottom;
     background-size: 100% 2px;
+    color: orange;
     background-repeat: no-repeat;
     transition:background-size .5s;
 }
+.copyright{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 0.3vw;
+}
+.logoname{
+    color: white;
+}
 
 /* Meida Query */
-
+@media (width:1024px) and (height:1366px){
+    footer{
+        bottom:0;
+    }
+    .wholebox{
+        height:50vw;
+    }
+    .list{
+        height:100%;
+        width: 100%;
+    }
+    .container{
+        height:60vw;
+    }
+}
 @media (max-width:860px){
-    /* body{
-        height: 10vw;
-    } */
+    body{
+        min-height: 90vw;
+    }
     .wholebox{
         height:70vw;
     }
@@ -347,6 +384,9 @@ footer .footer2 ul li a:hover{
     }
     .char1info{
         font-size:2vw;
+    }
+    footer{
+        bottom:0;
     }
 }
 
