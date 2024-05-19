@@ -12,44 +12,19 @@
   src: url('./Font/depixel/DePixelBreit.otf') format("opentype"), url('./Font/depixel/depixelbreit.woff2') format("woff"), url('./Font/depixel/DePixelBreit.ttf');
 }
 body {
-    /* font-family: 'Averia Serif Libre'; */
     margin: 0;
     padding: 0;
     font-family: 'Retro Gaming';
-    /* background-color: #f4f4f4; */
-    /* height: 100%;
-    width: 100%;*/
     background-image: url('./Asset/castle.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-  }
-  /* .background1{
-    background-image: url('./Asset/castle.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    z-index: -1;
-    background-position: center;
-    position: absolute;
-  } */
-  .bg {
-    /*height: 100%;
-    width: 100%; */
-    /* position: absolute; */
-    /* background-image: url('./Asset/castle.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh; */
-    /* width: 100vw; */
-    /* z-index: 1; */
   }
   
   .container {    
     width: 400px;
-    margin: 50px auto;
+    margin: 10px auto;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 5px;
@@ -82,7 +57,6 @@ body {
     margin: 10px 0px;
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
     color: red;
   }
@@ -106,6 +80,7 @@ body {
     margin-right: 5px;
     height: 100%;
   }
+
   .register_border{
     width: 100%;
     border: 1px solid;
@@ -115,8 +90,8 @@ body {
   button {
     width: 100%;
     padding: 10px;
-    background-color: blueviolet;
-    color: bl;
+    background-color: darkorange;
+    color: black;
     border: none;
     font-family: 'Retro Gaming';
     border-radius: 3px;
@@ -124,34 +99,55 @@ body {
   }
   
   button:hover {
-    background-color: darkviolet;
+    background-color: orange;
     color: white;
     transition: all .3s ease-in;
   }
-  
-  @media (max-width: 420px) {
-    body{
-      background-size: cover;
-      width: 100%;
-      height: 120vh;
-      background-position: center;
-    }
-  }
 
-@media (max-width:860px){
+  .term{
+    display: flex;
+    flex-direction: row;
+  }
+  
+@media (max-width: 430px) {
   body{
-    /* overflow-y: hidden; */
+    background-size: cover;
+    width: 100%;
+    height: 120vh;
+    background-position: center;
   }
   .container {    
-    /* width: 500px; */
-    max-width: 100%;
-    /* height: 100vw; */
-    /* margin: 50px auto; */
-    /* background-color: rgba(255, 255, 255, 0.8);
+    width: 41.5vh;
+    margin: 17vh auto;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1; */
+    z-index: 1;
+  }
+  input[type="text"], input[type="email"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Retro Gaming';
+  }
+  .error {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    font-size: 18px;
+  }
+  h3{
+    font-size: 30px;
+  }
+}
+
+@media (max-width:1024px){
+  .container {    
+    width: 60vh;
+    margin: 22vh auto;
   }
   .names{
     display: flex;
@@ -159,10 +155,13 @@ body {
     font-size: 20px;
   }
   h2{
-    font-size: 30px;
+    font-size: 40px;
+  }
+  .title{
+    font-size:20px;
   }
   .names input[type="text"]{
-    width: 80%;
+    width: 100%;
     font-size: 20px;
   }
   input[type="text"],
@@ -172,5 +171,20 @@ body {
   }
   .registerform label{
     font-size: 20px;
+  }
+  .firstone, .secondone{
+    display: grid;
+    margin-right: 2vh;
+  }
+  .error {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    font-size: 25px;
+  }
+  h3{
+    font-size: 30px;
   }
 }
