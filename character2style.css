@@ -271,6 +271,29 @@ footer .footer2 ul li a:hover{
 
 /* Meida Query */
 
+@media (width:1024px) and (height:1366px){
+    body{
+        height:133.4vw;
+    }
+    footer{
+        bottom:0;
+    }
+    .boxcontainer{
+        height:16vh;
+        gap: 4.3vw;
+        justify-content: center;
+        /* align-items: center; */
+        align-content: center;
+        position: relative;
+    }
+    .wholebox{
+        height:70vw;
+    }
+    .container{
+        height:70vw;
+    }
+}
+
 @media (max-width:860px){
     body{
         height: 160vw;
